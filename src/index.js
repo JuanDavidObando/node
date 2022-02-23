@@ -1504,10 +1504,21 @@ siguiente enlace.
 `
 
 var MetamorfosisSinAcentos = libro
-.replace(/[àá]/gmi,'a')
+.replace(/c/gmi,'a')
 .replace(/[èé]/gmi,'e')
 .replace(/[ìí]/gmi,'i')
 .replace(/[òó]/gmi,'o')
 .replace(/[ùú]/gmi,'u')
+.replace(/[ñ]/gmi,'n')
+
+var fragmento = `Estaba echado sobre el quitinoso caparazón de su espalda, y al levantar un poco la cabeza, vio la figura convexa de su vientre oscuro, surcado por curvadas durezas, cuya prominencia apenas si podía aguantar la colcha, visiblemente a punto de escurrirse hasta el suelo.`
+
+var trabalenguas = fragmento.replace(/[aeiou]/gmi,'e' )
+
+var MetamorfosisSinSaltosDeLinea = MetamorfosisSinAcentos.replace(/\n+/gmi,' ')
 
 console.log(MetamorfosisSinAcento)
+
+console.log(trabalenguas)
+
+console.log(MetamorfosisSinSaltosDeLinea)
